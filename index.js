@@ -20,42 +20,89 @@ const questions = [{
             }
         }
     },
-        { //what is the project for
+        { //project description
             type: 'input',
             name: 'purpose',
-            message: 'What is the purpose of your project?',
+            message: 'Describe your project?',
             validate: project_purpose => {
                 if (project_purpose) {
                     return true;
                 }else {
-                    console.log("Please enter your project's purpose.");
+                    console.log("Please enter a description.");
                     return false;
                 }
             }
         },
 
-       {// how does it complete that purpose?
+       {// installation
             type: 'input',
             name: 'means',
-            message: 'How does your project fulfill that purpose?',
-            validate: project_means => {
-                if (project_means) {
+            message: 'How is your project installed?',
+            validate: projectI => {
+                if (projectI) {
                     return true;
                 }else {
-                    console.log("Please enter how your project fulfills it's task.")
+                    console.log("Please enter how your project is installed.")
                     return false;
                 }
             }
        },
 
-       {//media?
-        type: 'input',
-        name: 'media'
-        message: ''
+       {//usage
+            type: 'input',
+            name: 'usage',
+            message: 'How is your project used?',
+            validate: projectI => {
+                if (projectI) {
+                    return true;
+                }else {
+                    console.log("Please enter how your project is used.")
+                    return false;
+                }
+            }
 
+        },
+         {//licesns
+            type: 'list',
+            name: 'license',
+            message: 'What license did you use?',
+            choices:['MIT License','GNU GPLv3', 'Apache', 'OpenBSD','N/A'];
+            validate: project_license => {
+                if (project_license) {
+                    return true;
+                }else {
+                    console.log("Please enter how your project is used.")
+                    return false;
+                }
+            }
+
+        },
+        {//Github
+            type: 'input',
+            name: 'github',
+            message:'Enter your GitHub username: ',
+            validate: git_UN => {
+                if (git_UN) {
+                    return true;
+                }else {
+                    console.log("Please enter a username");
+                    return false;
+                }
+            }
+        },
+         {//email
+            type: 'input',
+            name: 'email',
+            message:'Enter your email: ',
+            validate: email => {
+                if (email) {
+                    return true;
+                }else {
+                    console.log("Please enter a email");
+                    return false;
+                }
+            }
         }
-        //links? works cited?
-    
 ];
 
 // TODO: Create a function to write README file
