@@ -22,10 +22,10 @@ const questions = [{
 },
 { //project description
     type: 'input',
-    name: 'purpose',
+    name: 'description',
     message: 'Describe your project?',
-    validate: project_purpose => {
-        if (project_purpose) {
+    validate: description => {
+        if (description) {
             return true;
         } else {
             console.log("Please enter a description.");
@@ -36,10 +36,10 @@ const questions = [{
 
 {// installation
     type: 'input',
-    name: 'means',
+    name: 'installation',
     message: 'How is your project installed?',
-    validate: projectI => {
-        if (projectI) {
+    validate: installation => {
+        if (installation) {
             return true;
         } else {
             console.log("Please enter how your project is installed.")
@@ -52,8 +52,8 @@ const questions = [{
     type: 'input',
     name: 'usage',
     message: 'How is your project used?',
-    validate: projectI => {
-        if (projectI) {
+    validate: usage => {
+        if (usage) {
             return true;
         } else {
             console.log("Please enter how your project is used.")
