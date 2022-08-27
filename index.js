@@ -62,7 +62,7 @@ const questions = [{
     }
 
 },
-{//licesns
+{//license
     type: 'list',
     name: 'license',
     message: 'What license did you use?',
@@ -102,6 +102,32 @@ const questions = [{
             return false;
         }
     }
+},
+{ //project technology
+    type: 'input',
+    name: 'technology',
+    message: 'What technology did you use make your project?',
+    validate: technology => {
+        if (technology) {
+            return true;
+        } else {
+            console.log("Please respond.");
+            return false;
+        }
+    }
+},
+{ //project tests
+    type: 'input',
+    name: 'tests',
+    message: 'Who tested your project?',
+    validate: tests => {
+        if (tests) {
+            return true;
+        } else {
+            console.log("Please enter a value");
+            return false;
+        }
+    }
 }
 ];
 
@@ -122,7 +148,7 @@ function init() {
     inquirer.createPrompt(questions)
     .then(function(userInput){
         console.log(userInput)
-        writeToFile("README.md", generateMarkdown(userInput));
+        writeToFile("./output/README.md", generateMarkdown(userInput));
     });
 };
 
