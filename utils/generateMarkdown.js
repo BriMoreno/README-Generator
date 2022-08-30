@@ -48,9 +48,9 @@ function renderLicenseSection(license) {
 function generateMarkdown(qResponses) {
   return `
   # License
-  [![license](https://img.shields.io/badge/license-${data.license}-success.svg)] (https://shields.io/category/license)
+  ${renderLicenseBadge.licenseBadge}
 
-# ${data.title}
+# ${qResponses.title}
 
   # Table of Contents
   -[Description](#-Description)
@@ -63,27 +63,30 @@ function generateMarkdown(qResponses) {
   -[Questions](#-Questions)
  
   # Description
-  ${data.description}
+  ${qResponses.description}
 
   # Installation
-  ${data.installation}
+  ${qResponses.installation}
 
   # Usage
-  ${data.usage}
+  ${qResponses.usage}
 
   # Contributing
-  ${data.github}
-  ${data.email}
+  ${qResponses.github}
+  ${qResponses.email}
 
   # Tests
-  ${data.tests}
+  ${qResponses.tests}
 
   # Technology
-  ${data.technology}
+  ${qResponses.technology}
+
+  # License Description
+  ${renderLicenseSection.licenseDes}
 
   # Questions
-  ${data.github}
-  ${data.email}
+  ${qResponses.github}
+  ${qResponses.email}
 `;
 }
 
