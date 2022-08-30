@@ -148,7 +148,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions).then((data) =>{
         console.log("Creating your custom README file.");
-        writeToFile("./output/README>md", data);
+        writeToFile("./output/README.md", data);
         console.log("README file is in the 'output' folder");
     });
 }
