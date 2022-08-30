@@ -1,10 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const util = require("util")
 const generateMarkdown = require('./utils/generateMarkdown.js');
-const { syncBuiltinESMExports } = require('module');
-const writeFile = util.promisify(fs.writeFile);
 
 console.log("This is a README file Generator!")
 console.log("Answer these questions to generate your custom README file.")
