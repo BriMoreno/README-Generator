@@ -40,7 +40,7 @@ function generateMarkdown(data) {
   *[Tests](#-Tests)
   *[Technology](#-Technology)
   *[Questions](#-Questions)
-  *[License Description](#-License Description)
+  *[License Description](#-License-Description)
  
   # Description
   ${data.description}
