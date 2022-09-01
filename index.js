@@ -5,6 +5,24 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 
 console.log("This is a README file Generator!")
 console.log("Answer these questions to generate your custom README file.")
+
+//to get license badge to and link
+function licenseBadge(value) {
+    if (value === 'MIT License') {
+        return "[![license: MIT](https://img.shields.io/badge/license-MIT-brightgreen)](https://opensource.org/licenses/MIT)";
+
+    } else if (value === 'GNU GPLv3') {
+        return "[![license: GNU GPLv3](https://img.shields.io/badge/license-GNU%20GPLv3-yellow)](https://www.gnu.org/licenses/gpl-3.0.en.html)";
+
+    } else if (value === 'Apache') {
+        return "[![license: Apache](https://img.shields.io/badge/license-Apache-orange)](https://www.apache.org/licenses/)";
+
+    } else {
+        return "[![license: OpenBSD]https://img.shields.io/badge/license-OpenBSD-red)](https://www.openbsd.org/)";
+
+    }
+}
+
 // TODO: Create an array of questions for user input
 const questions = [
 
@@ -133,19 +151,24 @@ const questions = [
     }
 ];
 
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, generateMarkdown(data), function (err) {
-        if (err) throw err;
-        console.log('File is created successfully.');
-    });
 
+function writeToRM(fileName, data) {
+    fs.writeFile(fileName, generateMarkdown(data), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+    });
 }
+
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.prompt(questions).then((data) =>{
+    inquirer.prompt(questions).then((data) => {
         console.log("Creating your custom README file.");
-        writeToFile("./output/README.md", data);
+
+        data.licenseBadge = licenseBadge(data.license);
+
+        writeToRM("./output/README.md", data);
         console.log("README file is in the 'output' folder");
     });
 }
