@@ -23,8 +23,11 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 
+
+
 ## Video Demo of the the code
-![Video of the code](ReadMeGenerator.mp4)
+![Click on link](https://user-images.githubusercontent.com/69614167/191633533-2fd74b34-cd14-4f9b-90b9-cdc3919c0a6b.mp4)
+
 
 ## Help
 
