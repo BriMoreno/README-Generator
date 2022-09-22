@@ -2,7 +2,7 @@
   # License
   
 
-# COOKBOOK
+# Python practice
 
   # Table of Contents
   -[Description](#-Description)
@@ -16,29 +16,29 @@
   -[License Description](#-License-Description)
  
   # Description
-  An app to record and save recipes
+  A practice of my skills in python
 
   # Installation
-  It is installed via GitHub
+  Git clone
 
   # Usage
-  It is used by inputting information into a form and its data being saved to a database
+  It is used as a general practice of my skills in python
 
   # Contributing
-  brimoreno
-  bri@gmail.com
+  BriMoreno
+  student@email.com
 
   # Tests
-  I did all the testing for my project
+  BriMoreno
 
   # Technology
   These are the things I used to create my projects
-  HTML, CSS, Node.js, SQL
+  Python
 
   # License Description
   undefined
 
   # Questions
   If there are any questions you can contact me at:
-  * GitHub: brimoreno
-  * Email: bri@gmail.com
+  * GitHub: BriMoreno
+  * Email: student@email.com
